@@ -1,0 +1,7 @@
+{
+  "name": "debian-clean",
+  "type": "module",
+  "version": "1.0.0",
+  "packageManager": "yarn@4.0.2",
+  "license": "LGPL-3.0-or-later"
+}

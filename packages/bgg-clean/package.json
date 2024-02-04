@@ -1,0 +1,24 @@
+{
+  "name": "bgg-clean",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node tools/install.js",
+    "build": "node tools/build.js",
+    "lint": "npx eslint --color src/gen tools && npx stylelint --color src/**/*.css",
+    "release-tag": "git push --tags origin main",
+    "patch": "npx versions -pd patch $(wildcard *.user.css) package.json package-lock.json",
+    "minor": "npx versions -pd minor $(wildcard *.user.css) package.json package-lock.json",
+    "major": "npx versions -pd major $(wildcard *.user.css) package.json package-lock.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "LGPL-3.0-or-later",
+  "devDependencies": {
+    "open": "^9.1.0"
+  },
+  "packageManager": "yarn@4.0.2"
+}

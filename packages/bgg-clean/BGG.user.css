@@ -1,0 +1,48 @@
+/* ==UserStyle==
+@name           BGG something clean
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document url-prefix("https://boardgamegeek.com/thread/") {
+    /* hide these elements */
+
+    /* ads */
+    .global-body-content>gg-support-leaderboard-ad:nth-child(2),
+    /* inline ad */
+    .global-body-content-primary>gg-articles:nth-child(5)>gg-articles-ui:nth-child(1)>section:nth-child(1)>gg-article:nth-child(12)>gg-post:nth-child(1)>gg-post-inline-ad,
+    /* sidebar */
+    .sidebar-open {
+        display: none
+    }
+
+    /* page width */
+    nav.container-fluid,
+    #mainbody {
+        max-width: 100px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .global-body-content-primary>gg-articles:nth-child(5)>gg-articles-ui:nth-child(1)>section:nth-child(1)>gg-article>gg-post>article {
+        border: 0px;
+    }
+
+    /* ----- footer ----- */
+    /* center the footer grid */
+    .tw-gap-x-4 {
+        justify-items: center;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important
+    }
+
+
+    /* remove the 2 middle colums of the footer */
+
+    .tw-gap-x-4>div:nth-child(2),
+    .tw-gap-x-4>div:nth-child(3) {
+        display: none
+    }
+}
